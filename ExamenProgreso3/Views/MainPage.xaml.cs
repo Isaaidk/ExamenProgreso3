@@ -1,5 +1,7 @@
 ﻿
-    using ExamenProgreso3.ViewModel;
+using ExamenProgreso3.ViewModel;
+
+
 namespace ExamenProgreso3
 {
     public partial class MainPage : ContentPage
@@ -8,7 +10,7 @@ namespace ExamenProgreso3
         {
             InitializeComponent();
 
-            // Establecer el contexto de datos al ViewModel
+           
             BindingContext = new PeliculasViewModel();
         }
     }

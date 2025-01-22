@@ -2,7 +2,7 @@
 
 
 
-namespace ExamenProgreso3
+namespace ExamenProgreso3.Views
 {
     public static class MauiProgram
     {
@@ -18,9 +18,9 @@ namespace ExamenProgreso3
                 });
 
 
-           
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

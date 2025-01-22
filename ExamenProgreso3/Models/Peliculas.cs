@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceStack.DataAnnotations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,13 +11,13 @@ namespace ExamenProgreso3.Models
     {
 
 
-       
-            public int id { get; set; }
-            public string title { get; set; }
-            public string[] genre { get; set; }
-            public string[] actors { get; set; }
-            public string awards { get; set; }
-            public string website { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int id { get; set; }
+        public string title { get; set; }
+        public string genre { get; set; }
+        public string actors { get; set; }
+        public string awards { get; set; }
+        public string website { get; set; }
 
     }
 }

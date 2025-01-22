@@ -4,48 +4,49 @@
              xmlns:vm="clr-namespace:ExamenProgreso3.ViewModel"
              x:Class="ExamenProgreso3.MainPage">
 
-    <!-- Vincular el ViewModel con esta página -->
+ 
     <ContentPage.BindingContext>
         <vm:PeliculasViewModel />
     </ContentPage.BindingContext>
 
     <ScrollView>
+        
+        
         <VerticalStackLayout
             Padding="20"
             Spacing="15">
+            <Button Text="Ver películas guardadas"
+        Command="{Binding NavigateToPeliculasGuardadasCommand}" />
 
-            <!-- Título -->
             <Label
                 Text="Buscar Película"
                 FontSize="24"
                 HorizontalOptions="Center"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <!-- Campo de entrada para buscar -->
+   
             <Entry
                 Placeholder="Ingresa el nombre de la película"
                 Text="{Binding SearchText}" />
 
-            <!-- Botón para buscar -->
             <Button
                 Text="Buscar"
                 Command="{Binding BuscarPeliculaCommand}"
                 HorizontalOptions="Fill" />
+            <Button Text="Guardar Película" Command="{Binding GuardarPeliculaCommand}" />
 
-            <!-- Indicador de carga -->
             <ActivityIndicator
                 IsVisible="{Binding IsLoading}"
                 IsRunning="{Binding IsLoading}"
                 VerticalOptions="Center" />
 
-            <!-- Mensaje de error -->
             <Label
                 Text="{Binding ErrorMessage}"
                 TextColor="Red"
                 FontSize="16"
                 IsVisible="{Binding HasError}" />
 
-            <!-- Resultado: Detalles de la película -->
+   
             <CollectionView
                 ItemsSource="{Binding Peliculas}"
                 IsVisible="{Binding HasPeliculas}">
@@ -53,11 +54,11 @@
                     <DataTemplate>
                         <VerticalStackLayout Padding="10">
                             <Label Text="Géneros:" FontAttributes="Bold" />
-                            <!-- Mostrar los géneros formateados -->
+                            
                             <Label Text="{Binding FormattedGenres}" />
 
                             <Label Text="Actores:" FontAttributes="Bold" />
-                            <!-- Mostrar los actores formateados -->
+                        
                             <Label Text="{Binding FormattedActors}" />
                        
                             <Label Text="Premios:" FontAttributes="Bold" />

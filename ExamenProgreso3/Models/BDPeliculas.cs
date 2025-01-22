@@ -16,10 +16,12 @@ namespace ExamenProgreso3.Models
         [PrimaryKey, AutoIncrement]
         public int id { get; set; }
         public string title { get; set; }
-        public string[] genre { get; set; }
-        public string[] actors { get; set; }
+        public List<string> genre { get; set; } = new List<string>();
+        public List<string> actors { get; set; } = new List<string>();
         public string awards { get; set; }
         public string website { get; set; }
+
+        public string user = "Isaac ";
 
     }
 }

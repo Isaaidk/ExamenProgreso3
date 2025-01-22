@@ -6,10 +6,16 @@
     xmlns:local="clr-namespace:ExamenProgreso3"
     Shell.FlyoutBehavior="Disabled"
     Title="ExamenProgreso3">
+    <TabBar>
+        <!-- Definir cada tab con su respectiva página -->
+        <Tab Title="Página 1" Icon="icon1.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="Página 2" Icon="icon2.png">
+            <ShellContent ContentTemplate="{DataTemplate local:PeliculasGuardadasPage}" />
+        </Tab>
+    </TabBar>
+    
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+   
 </Shell>
