@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 
+
+
 namespace ExamenProgreso3
 {
     public static class MauiProgram
@@ -15,6 +17,8 @@ namespace ExamenProgreso3
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+
+           
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif

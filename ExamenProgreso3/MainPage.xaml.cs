@@ -1,25 +1,15 @@
-﻿namespace ExamenProgreso3
+﻿
+    using ExamenProgreso3.ViewModel;
+namespace ExamenProgreso3
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
-        }
 
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            // Establecer el contexto de datos al ViewModel
+            BindingContext = new PeliculasViewModel();
         }
     }
-
 }
